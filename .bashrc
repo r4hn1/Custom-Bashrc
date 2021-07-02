@@ -144,7 +144,7 @@ fi
 trap 'echo -ne "\033]0;Terminator\007" > /dev/stderr' DEBUG
 
 #echo -ne "\033]0;$BASH_COMMAND - Terminator\007" > /dev/stderr
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 #exporting IP in variable with if else condition
 export IP=$(if ifconfig | grep tun0 >> /dev/null
