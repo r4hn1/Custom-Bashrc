@@ -18,7 +18,14 @@ Just download the bashrc from my repo and use it to your system.
 # cp ~/.bashrc ~./bashrc.bak
 ```
 
-3. Download and use it.
+3. Add your name in .bashrc (Line 147)
+
+```
+# vim ~/.bashrc
+  export name="R4hn1" #Change Your Name Here
+```
+
+4. Download and use it.
 
 ```
 # wget https://raw.githubusercontent.com/r4hn1/Custom-Bashrc/main/.bashrc -O ~/.bashrc
