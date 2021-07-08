@@ -148,8 +148,11 @@ trap 'echo -ne "\033]0;Terminator\007" > /dev/stderr' DEBUG
 export IP=$(if ifconfig | grep tun0 >> /dev/null
 then
 	ifconfig tun0 | grep "inet " | cut -d " " -f 10
+elif ifconfig | grep wlan0 >> /dev/null
+then
+	ifconfig wlan0 | grep "inet " | cut -d " " -f 10
 else
-	ifconfig wlan0 | grep "inet " | cut -d " " -f 10 # Replace your Interface Name
+    ifconfig eth0 | grep "inet " | cut -d " " -f 10
 fi)
 
 export PS1="\[\033[0;31m\]\342\224\214\342\224\200$([[ $? != 0 ]] && echo "[\[\033[0;31m\]\342\234\227\[\033[0;37m\]]\342\224\200")\033[0;31m\][\[\033[0;97m\]\[\033[1;94m\]R4hn1\[\033[0;31m\]]\342\224\200\\033[0;31m\][\[\033[0;97m\]"$IP"\[\033[0;31m\]]\342\224\200[\[\033[0;97m\]\u\[\033[01;33m\]@\[\033[1;94m\]\h\[\033[01;33m\]\[\033[0;31m\]]\342\224\200\[[\[\033[0;97m\]\w\[\033[0;31m\]]\n\[\033[0;31m\]\342\224\224\342\224\200\342\224\200\342\224\200\342\224\200\342\225\274 \[\033[0m\]\[\e[01;33m\]\\$ \[\e[0m\]"
