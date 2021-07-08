@@ -142,7 +142,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-trap 'echo -ne "\033]0;Terminator\007" > /dev/stderr' DEBUG
+trap 'echo -ne "\033]0;Terminator\007"' DEBUG
 
 #exporting IP in variable from conditional statement
 export IP=$(if ifconfig | grep tun0 >> /dev/null
