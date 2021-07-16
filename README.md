@@ -15,7 +15,7 @@ Just download the bashrc from my repo and use it to your system.
 2. Create a Backup for original .bashrc
 
 ```
-# cp ~/.bashrc ~./bashrc.bak
+# cp ~/.bashrc ~/.bashrc.bak
 ```
 
 5. Download and use it.
